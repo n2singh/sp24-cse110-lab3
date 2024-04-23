@@ -4,77 +4,274 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baking Club Meeting Minutes</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* General CSS Topics */
+
+        /* Comment: write down comments to make your CSS easier to read */
+        
+        /* Color: apply colors to your HTML elements */
+        body {
+            color: rgb(70, 70, 70); /* example using RGB values */
+            background-color: #f0f0f0; /* example using hex code */
+        }
+
+        h1 {
+            color: hsl(210, 50%, 50%); /* example using HSL values */
+        }
+
+        /* Background: apply background styles to your elements */
+        header {
+            background-color: lightblue;
+        }
+
+        /* Unit: units of measurement for sizing and spacing your elements */
+        main {
+            width: 80%; /* example using relative units */
+            margin: 20px auto; /* example using absolute units */
+        }
+
+        /* Box Model: configure the containers that hold your HTML content */
+        section {
+            padding: 10px; /* example using shorthand notation */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Text: style your text */
+        p {
+            text-align: justify; /* example aligning text */
+            text-decoration: underline; /* example adding text decoration */
+        }
+
+        /* Display: apply display properties */
+        nav ul {
+            display: inline-block; /* example using inline-block */
+        }
+
+        footer {
+            display: none; /* example using none */
+        }
+
+        /* Sizing: set the height and width for an element */
+        img {
+            width: 100%; /* example setting width */
+            max-width: 500px; /* example using max-width */
+            height: auto; /* maintain aspect ratio */
+        }
+
+        /* Position: element positioning on the page */
+        footer {
+            position: fixed; /* example using fixed */
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        /* Pseudo-class: elements that exist in your document conditionally */
+        a:hover {
+            color: red; /* example changing color on hover */
+        }
+
+        /* Flexbox: allow your elements to lay themselves out automatically */
+        main {
+            display: flex; /* example using flex */
+            justify-content: space-around; /* example using justify-content */
+        }
+
+        /* Grid: instantiate a grid for your layouts */
+        section {
+            display: grid; /* example using grid */
+            grid-template-columns: repeat(3, 1fr); /* example using grid-template-columns */
+            gap: 10px; /* example using gap */
+        }
+
+        /* Responsiveness: make your website friendly for multiple devices */
+        @media screen and (max-width: 768px) {
+            nav ul {
+                display: block; /* example changing layout for smaller screens */
+            }
+        }
+
+        /* Fonts: pick varying font styles to make your text fun to read */
+        body {
+            font-family: 'Arial', sans-serif; /* example using system font */
+        }
+
+        /* CSS Selectors */
+        /* Class Selector */
+        .highlight {
+            background-color: yellow; /* example using class selector */
+        }
+
+        /* ID Selector */
+        #topic {
+            font-weight: bold; /* example using ID selector */
+        }
+
+        /* Universal Selector */
+        * {
+            border: 1px solid #ccc; /* example applying border to all elements */
+        }
+
+        /* Element Selector */
+        h2 {
+            font-style: italic; /* example styling specific element */
+        }
+
+        /* Attribute Selector */
+        img[alt="Baking Diagram"] {
+            border: none; /* example targeting img with specific alt attribute */
+        }
+
+        /* Pseudo-class Selector */
+        p:hover {
+            background-color: lightgrey; /* example changing background on hover */
+        }
+
+        /* Selector List */
+        h1, h2 {
+            text-transform: uppercase; /* example applying style to multiple selectors */
+        }
+
+        /* Combinators */
+        nav ul > li {
+            display: inline; /* example using child combinator */
+        }
+
+        /* New Selectors */
+        /* :has() - Not supported in CSS yet */
+
+        /* Nested Selectors */
+        main section h3 {
+            color: darkgreen; /* example using nested selector */
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Baking Club Meeting Minutes</h1>
-    
-    <h2>Meeting Date: April 13, 2024</h2>
-    
-    <h3>Attendance:</h3>
+<nav>
     <ul>
-        <li>Naina Singh</li>
-        <li>Random Guy/li>
-        <li>Professor Powell</li>
+        <li><a href="#topic">Meeting Topic</a></li>
+        <li><a href="#attendance">Attendance</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#unfinished">Unfinished Business</a></li>
+        <li><a href="#new">New Business</a></li>
+        <li><a href="#miscellaneous">Miscellaneous</a></li>
+        <li><a href="#footer">Baking Survey</a></li>
     </ul>
-    
-    <h3>Agenda:</h3>
-    <ol>
-        <li>Discussion on upcoming baking competition</li>
-        <li>Planning for next baking workshop</li>
-        <li>Review of previous baking techniques</li>
-    </ol>
-    
-    <h3>Unfinished Business:</h3>
-    <p>No unfinished business from the previous meeting.</p>
-    
-    <h3>New Business:</h3>
-    <p>Decided on the theme for the upcoming baking competition: "Decadent Desserts".</p>
-    
-    <h3>Miscellaneous Comments / Questions / Concerns:</h3>
-    <p>John suggested organizing a bake sale to raise funds for charity.</p>
-    
-    <h3>Diagrams / Presentations:</h3>
-    <img src="baking_diagram.jpg" alt="Baking Diagram">
-    
-    <h3>Audio Recording:</h3>
-    <audio controls>
-        <source src="eggs_cracking.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    
-    <h3>Video Recording:</h3>
-    <video controls>
-        <source src="vanilla_mug_cake.mp4" type="video/mp4">
-        Your browser does not support the video element.
-    </video>
-    
-    <hr>
-    
+</nav>
+
+<header>
+    <section id="topic">
+        <h1>Baking Club Meeting Minutes</h1>
+    </section>
+</header>
+
+<main>
+    <section>
+        <h2>Meeting Topic: Decadent Desserts Competition</h2>
+        <h3>Date: April 13, 2024</h3>
+        
+        <section id="attendance">
+            <h3>Attendance:</h3>
+            <ul>
+                <li>Naina Singh</li>
+                <li>Random Guy</li>
+                <li>Professor Powell</li>
+            </ul>
+        </section>
+
+        <section id="agenda">
+            <h3>Agenda:</h3>
+            <ol>
+                <li>Discussion on upcoming baking competition</li>
+                <li>Planning for next baking workshop</li>
+                <li>Review of previous baking techniques</li>
+            </ol>
+        </section>
+
+        <section id="unfinished">
+            <h3>Unfinished Business:</h3>
+            <p>No unfinished business from the previous meeting.</p>
+        </section>
+
+        <section id="new">
+            <h3>New Business:</h3>
+            <p>Decided on the theme for the upcoming baking competition: "Decadent Desserts".</p>
+        </section>
+
+        <section id="miscellaneous">
+            <h3>Miscellaneous Comments / Questions / Concerns:</h3>
+            <p>John suggested organizing a bake sale to raise funds for charity.</p>
+            
+            <h3>Diagrams / Presentations:</h3>
+            <img src="baking_diagram.jpg" alt="Baking Diagram">
+            
+            <h3>Audio Recording:</h3>
+            <audio controls>
+                <source src="eggs_cracking.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            
+            <h3>Video Recording:</h3>
+            <video controls>
+                <source src="vanilla_mug_cake.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </section>
+    </section>
+</main>
+
+<footer id="footer">
     <h2>Baking Survey</h2>
     
     <form>
-        <fieldset>
-            <legend>Baking Preferences</legend>
-            <label for="favorite_dessert">Favorite Dessert:</label>
-            <input type="text" id="favorite_dessert" name="favorite_dessert">
-            <br>
-            <label for="baking_experience">Baking Experience:</label>
-            <select id="baking_experience" name="baking_experience">
-                <option value="beginner">Beginner</option>
-                <option value="intermediate">Intermediate</option>
-                <option value="advanced">Advanced</option>
-            </select>
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <br>
-            <label for="comments">Additional Comments:</label>
-            <textarea id="comments" name="comments"></textarea>
-            <br>
-            <input type="submit" value="Submit">
-        </fieldset>
+        <!-- Form content here -->
     </form>
+    <hr>
+</footer>
+
+<hr>
     
+<div>
+    <span>This is a span element.</span>
+    <span>Another span element for demonstration.</span>
+</div>
+
+<hr>
+
+<p>This is a paragraph element. It provides structure to the text content.</p>
+    
+<ul>
+    <li>This is an unordered list item.</li>
+    <li>Another list item here.</li>
+</ul>
+    
+<ol>
+    <li>This is an ordered list item.</li>
+    <li>Another ordered list item here.</li>
+</ol>
+    
+<p><b>This text is bold.</b> <strong>This text is strong.</strong> They are visually similar, but semantically different.</p>
+    
+<p><i>This text is italicized.</i> <em>This text is emphasized.</em> They serve similar purposes, but have different meanings.</p>
+    
+<a href="#">This is a link</a> to nowhere.
+    
+<p>This is a line<br>break.</p>
+
+<hr>
+
+<details>
+    <summary>Click me for details</summary>
+    <p>This is additional information that can be revealed when clicking the summary.</p>
+</details>
+
 </body>
 </html>
+
