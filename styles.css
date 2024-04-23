@@ -2,94 +2,94 @@
 
 /* Defines the web-imported font */
 @font-face {
-    font-family: 'Roboto';
-    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    font-family: "Open Sans";
+    src: url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 }
 
 /* Contains base variables */
 :root {
-    --base-color: darkgray;
+    --base-color: lightgray;
 }
 
 * {
-    /* Sets entire page's font to Roboto */
-    font-family: 'Roboto', sans-serif;
+    /* Sets entire page's font to Open Sans */
+    font-family: "Open Sans", sans-serif;
 }
 
 header {
-    background-color: cornflowerblue;
+    background-color: #deb887; /* burlywood */
 }
 
 body {
-    background-color: var(--base-color, white); /* If --base-color is invalid for some reason, will default to white  */
+    background-color: var(--base-color, #fff); /* If --base-color is invalid for some reason, will default to white */
 }
 
 footer {
-    background-color: cornflowerblue;
+    background-color: #deb887; /* burlywood */
 }
 
 footer h2{
-    background-color: lightgray;
+    background-color: #fff; /* white */
 }
 
 h1 {
-    color: #800000; /* Maroon */
+    color: #00008b; /* darkblue */
     text-align: center;
 }
 
 h2 {
-    color: rgb(34, 139, 34); /* Forest Green */
+    color: rgb(255, 0, 255); /* magenta */
     text-align: center;
 }
 
 h3 {
-    color: color(srgb 34 139 34 / 0.5); /* Semi-transparent Forest Green */
+    color: rgba(0, 128, 0, 0.5); /* color(from green srgb r g b / 0.5) */
     text-decoration: underline;
 }
 
 h3:has(+ p) {
-    color: darkcyan;
+    color: #20b2aa; /* lightseagreen */
 }
 
 h3 + p {
-    color: hsl(218, 100%, 27%); /* Dark Cyan */
+    color: hsl(180, 72%, 44%); /* hsl(44, 95%, 42%) */
 }
 
 ul > li {
-    color: midnightblue;
+    color: #2f4f4f; /* darkslategrey */
 }
 
 fieldset ~ img {
-    border-width: 3px; /* Reduced border width */
+    border-width: 3px; /* 5px */
 }
 
 /* Used for both header and footer */
 .box {
     /* Border */
     border-style: solid;
-    border-color: color-mix(in HSL, blue 60%, white); /* Mixed blue with more dominance */
-    border-width: 3mm; /* Reduced border width */
-    border-radius: 10px; /* Increased border radius */
+    border-color: color-mix(in HSL, blue 70%, white); /* color-mix(in HSL, blue 50%, white) */
+    border-width: 2px; /* 2mm */
+    border-radius: 10px; /* 7px */
 
     /* Padding */
-    padding: 1cm 1cm; /* Uniform padding */
-    padding-left: 20px; /* Increased left padding */
-    padding-bottom: 20px; /* Increased bottom padding */
+    padding: 1cm 38px; /* 1cm 37.8px */
+    padding-left: 1cm; /* 1cm */
+    padding-bottom: 38px; /* 37.8px */
 
     /* Margin */
-    margin: 5vh 5vw; /* Reduced margin */
-    margin-left: 5vw; /* Reduced left margin */
-    margin-bottom: 5vh; /* Reduced bottom margin */
+    margin: 10vh 20vw; /* 10vh 10vw */
+    margin-left: 20vw; /* 10vw */
+    margin-bottom: 10vh; /* 10vh */
 }
 
 /* Used for general body texts */
 section.general {
     /* Border */
     border-style: none;
-    border-radius: 8px;
+    border-radius: 8px; /* 4px */
 
     /* Padding */
-    padding: 15px; /* Reduced padding */
+    padding: 15px; /* 20px */
 
     /* Margin */
     margin: auto;
@@ -98,10 +98,10 @@ section.general {
 form {
     position: static;
     /* Makes the form into a centered */
-    display: flex; /* Changed from grid to flex */
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Changed to column layout */
+    display: flex;
+    justify-content: center; /* grid */
+    align-items: center; /* space-evenly */
+    gap: 10px; /* none */
 }
 
 nav {
@@ -109,43 +109,43 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px; /* 10px */
 }
 
 audio {
-    display: flex;
+    display: block; /* flex */
     justify-content: center;
     align-items: center;
 }
 
 video, 
 img {
-    max-width: 95%; /* Reduced maximum width */
+    max-width: 100%;
     height: auto;
 }
 
 summary:hover {
-    color: darkblue; /* Changed hover color to dark blue */
+    color: #0000ff; /* blue */
 }
 
 button {
     &:hover {
-        color: dimgray; /* Changed hover color to dim gray */
+        color: #808080; /* gray */
     }
     &:active {
-        color: black;
+        color: #000; /* black */
     }
 }
 
 a[href="#poll"] {
-    color: darkorchid; /* Changed link color to dark orchid */
+    color: #800080; /* purple */
 }
 
 @media (min-width: 30em) and (max-width: 50em) {
     #cat {
-        position: static;
-        align-content: center;
-        justify-content: center;
+        position: relative; /* static */
+        align-items: center; /* center */
+        justify-content: center; /* center */
     }
 }
 
@@ -155,7 +155,7 @@ a[href="#poll"] {
     }
     header {
         position: sticky;
-        top: 10px; /* Reduced sticky header top position */
+        top: 10px; /* 20px */
     }
 }
 
