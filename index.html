@@ -6,141 +6,172 @@
     <title>Baking Club Meeting Minutes</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
-        /* General CSS Topics */
+        /* Comment: write down comments to make your css easier to read */
+        /* This CSS stylesheet styles the Baking Club Meeting Minutes webpage */
 
-        /* Comment: write down comments to make your CSS easier to read */
-        
         /* Color: apply colors to your HTML elements */
         body {
-            color: rgb(70, 70, 70); /* example using RGB values */
-            background-color: #f0f0f0; /* example using hex code */
+            color: #333; /* hex code */
         }
 
         h1 {
-            color: hsl(210, 50%, 50%); /* example using HSL values */
+            color: rgb(70, 130, 180); /* rgb value */
+        }
+
+        h2 {
+            color: hsl(240, 100%, 50%); /* hsl value */
+        }
+
+        /* CSS Variables & Fallbacks */
+        :root {
+            --primary-color: #007bff; /* primary color variable */
+        }
+
+        body {
+            color: var(--primary-color); /* using CSS variable */
+            color: #007bff; /* fallback color */
         }
 
         /* Background: apply background styles to your elements */
-        header {
-            background-color: lightblue;
+        body {
+            background-color: #f8f9fa; /* background color */
         }
 
         /* Unit: units of measurement for sizing and spacing your elements */
-        main {
-            width: 80%; /* example using relative units */
-            margin: 20px auto; /* example using absolute units */
+        /* Relative units */
+        header {
+            padding: 2rem; /* rem unit */
         }
 
-        /* Box Model: configure the containers that hold your HTML content */
+        main {
+            width: 80%; /* percentage unit */
+            margin: 0 auto; /* em unit */
+        }
+
+        footer {
+            padding: 20px; /* px unit */
+        }
+
+        /* Box Model: configure the containers that holds your HTML content */
+        /* Margin */
+        header {
+            margin-bottom: 20px; /* longhand */
+            margin: 10px 0; /* shorthand */
+        }
+
+        /* Padding */
         section {
-            padding: 10px; /* example using shorthand notation */
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 20px;
+            padding: 10px 20px; /* longhand */
+            padding: 10px; /* shorthand */
+        }
+
+        /* Borders */
+        section {
+            border: 1px solid #ccc; /* border style, color, and width */
+            border-radius: 5px; /* border radius */
         }
 
         /* Text: style your text */
         p {
-            text-align: justify; /* example aligning text */
-            text-decoration: underline; /* example adding text decoration */
+            text-align: justify; /* text alignment */
+            text-decoration: none; /* text decoration */
         }
 
-        /* Display: apply display properties */
+        /* Display */
         nav ul {
-            display: inline-block; /* example using inline-block */
-        }
-
-        footer {
-            display: none; /* example using none */
+            display: block; /* block value */
         }
 
         /* Sizing: set the height and width for an element */
         img {
-            width: 100%; /* example setting width */
-            max-width: 500px; /* example using max-width */
+            max-width: 100%; /* max width */
             height: auto; /* maintain aspect ratio */
         }
 
         /* Position: element positioning on the page */
         footer {
-            position: fixed; /* example using fixed */
+            position: fixed; /* fixed position */
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: #333;
-            color: white;
-            padding: 10px;
         }
 
         /* Pseudo-class: elements that exist in your document conditionally */
         a:hover {
-            color: red; /* example changing color on hover */
+            color: #0056b3; /* hover color */
         }
 
-        /* Flexbox: allow your elements to lay themselves out automatically */
+        /* Layouts */
+        /* Flexbox */
         main {
-            display: flex; /* example using flex */
-            justify-content: space-around; /* example using justify-content */
+            display: flex; /* flex container */
+            flex-wrap: wrap; /* wrap children */
+            justify-content: space-around; /* horizontal alignment */
+            align-items: center; /* vertical alignment */
         }
 
-        /* Grid: instantiate a grid for your layouts */
+        /* Grid */
         section {
-            display: grid; /* example using grid */
-            grid-template-columns: repeat(3, 1fr); /* example using grid-template-columns */
-            gap: 10px; /* example using gap */
+            display: grid; /* grid container */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* responsive grid */
+            gap: 20px; /* gap between grid items */
         }
 
         /* Responsiveness: make your website friendly for multiple devices */
         @media screen and (max-width: 768px) {
-            nav ul {
-                display: block; /* example changing layout for smaller screens */
+            main {
+                width: 90%; /* adjust width for smaller screens */
             }
         }
 
-        /* Fonts: pick varying font styles to make your text fun to read */
+        /* Fonts */
         body {
-            font-family: 'Arial', sans-serif; /* example using system font */
+            font-family: 'Arial', sans-serif; /* default font */
         }
 
         /* CSS Selectors */
         /* Class Selector */
         .highlight {
-            background-color: yellow; /* example using class selector */
+            background-color: #ffffcc; /* highlight color */
         }
 
         /* ID Selector */
         #topic {
-            font-weight: bold; /* example using ID selector */
+            font-weight: bold; /* bold font */
         }
 
         /* Universal Selector */
         * {
-            border: 1px solid #ccc; /* example applying border to all elements */
+            border: 1px solid #ccc; /* border for all elements */
         }
 
         /* Element Selector */
-        h2 {
-            font-style: italic; /* example styling specific element */
+        h3 {
+            font-style: italic; /* italic font */
         }
 
         /* Attribute Selector */
         img[alt="Baking Diagram"] {
-            border: none; /* example targeting img with specific alt attribute */
+            border: none; /* remove border for specific img */
         }
 
         /* Pseudo-class Selector */
         p:hover {
-            background-color: lightgrey; /* example changing background on hover */
+            background-color: #f0f0f0; /* background color on hover */
         }
 
         /* Selector List */
         h1, h2 {
-            text-transform: uppercase; /* example applying style to multiple selectors */
+            text-transform: uppercase; /* uppercase text */
         }
 
         /* Combinators */
-        nav ul > li {
-            display: inline; /* example using child combinator */
+        nav > ul {
+            margin: 0; /* remove margin for direct child */
+        }
+
+        footer + hr {
+            margin-top: 20px; /* add margin before hr */
         }
 
         /* New Selectors */
@@ -148,7 +179,7 @@
 
         /* Nested Selectors */
         main section h3 {
-            color: darkgreen; /* example using nested selector */
+            color: #cc0000; /* color for nested h3 */
         }
     </style>
 </head>
@@ -211,6 +242,7 @@
             
             <h3>Diagrams / Presentations:</h3>
             <img src="baking_diagram.jpg" alt="Baking Diagram">
+            <!-- Whiteboard diagram could be inserted here -->
             
             <h3>Audio Recording:</h3>
             <audio controls>
@@ -274,4 +306,3 @@
 
 </body>
 </html>
-
