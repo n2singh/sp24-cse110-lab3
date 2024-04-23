@@ -1,0 +1,228 @@
+/* Comments for clarity */
+/* Color */
+h3 {
+  color: rgb(255, 0, 0); /* Red */
+}
+footer {
+  background-color: #FFF; /* White */
+}
+body {
+  color: hsl(120, 100%, 50%); /* Lime */
+}
+ul {
+  color: navy; /* Predefined color name */
+}
+p {
+  color: color(srgb 255 0 255); /* Predefined color space */
+}
+a {
+  color: color-mix(normal, white 50%, black 50%); /* Mix of white and black */
+}
+
+/* CSS Variables & Fallbacks */
+:root {
+  --primary-color: blue;
+}
+h2 {
+  color: var(--primary-color, black); /* Using a CSS variable with fallback */
+}
+
+/* Background */
+main {
+  background-color: rgba(0, 255, 0, 0.5); /* Green with 50% opacity */
+}
+
+/* Unit */
+h2 {
+  font-size: 2em; /* Relative unit */
+}
+p {
+  font-size: 18px; /* Absolute unit */
+}
+footer {
+  font-size: 1.5rem; /* Relative unit */
+}
+
+/* Box Model */
+section {
+  margin: 10px 20px 30px 40px; /* Long notation */
+  padding: 5px; /* Short notation */
+}
+div {
+  margin: auto; /* Auto margin */
+}
+
+/* Borders */
+video {
+  border-style: solid;
+  border-color: brown;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+/* Text */
+p {
+  text-decoration: underline;
+}
+footer {
+  text-align: center;
+}
+
+/* Display */
+footer {
+  display: block;
+}
+hr {
+  display: inline-block;
+}
+
+/* Sizing */
+form {
+  height: 200px;
+  width: 80%;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+/* Position */
+details {
+  position: sticky;
+  top: 20px;
+}
+summary {
+  position: relative;
+}
+
+/* Pseudo-class */
+button:hover {
+  color: purple;
+}
+button:active {
+  color: yellow;
+}
+
+/* Flexbox */
+div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Grid */
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Fonts */
+body {
+  font-family: 'Roboto', sans-serif; /* Using a Google Font */
+}
+
+/* CSS Selectors */
+/* Class Selector */
+.some-class {
+  color: orange;
+}
+
+/* ID Selector */
+#footer {
+  color: grey;
+}
+
+/* Universal Selector */
+* {
+  font-style: italic;
+}
+
+/* Element Selector */
+input {
+  border: 1px solid black;
+}
+
+/* Attribute Selector */
+input[type="text"] {
+  background-color: lightgrey;
+}
+
+/* Pseudo-class Selector */
+a:hover {
+  text-decoration: none;
+}
+
+/* Selector List */
+h2, p {
+  font-weight: bold;
+}
+
+/* Combinators */
+/* Descendant Combinator */
+main p {
+  font-style: normal;
+}
+
+/* Child Combinator */
+main > section {
+  font-size: 1.2em;
+}
+
+/* General sibling combinator */
+main ~ footer {
+  font-size: 1.2em;
+}
+
+/* Adjacent sibling combinator */
+footer + hr {
+  margin-top: 20px;
+}
+
+/* Combining Two Selectors */
+footer.button {
+  background-color: cyan;
+}
+
+/* Box Model */
+/* Margin */
+h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+div {
+  margin: 10px 20px 30px 40px; /* Short notation */
+}
+
+/* Padding */
+footer {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+}
+section {
+  padding: 5px; /* Short notation */
+}
+
+/* Text Color */
+main {
+  color: darkgreen;
+}
+
+/* Nesting Selector */
+main h2 {
+  text-decoration: underline;
+}
+
+/* :has() pseudo-class */
+h1:has(+ p) {
+  margin-bottom: 0;
+}
