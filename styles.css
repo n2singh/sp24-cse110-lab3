@@ -1,228 +1,159 @@
-/* Comments for clarity */
-/* Color */
-h3 {
-  color: rgb(255, 0, 0); /* Red */
-}
-footer {
-  background-color: #FFF; /* White */
-}
-body {
-  color: hsl(120, 100%, 50%); /* Lime */
-}
-ul {
-  color: navy; /* Predefined color name */
-}
-p {
-  color: color(srgb 255 0 255); /* Predefined color space */
-}
-a {
-  color: color-mix(normal, white 50%, black 50%); /* Mix of white and black */
+/* Defines the web-imported font */
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 }
 
-/* CSS Variables & Fallbacks */
+/* Contains base variables */
 :root {
-  --primary-color: blue;
-}
-h2 {
-  color: var(--primary-color, black); /* Using a CSS variable with fallback */
+    --base-color: darkgray;
 }
 
-/* Background */
-main {
-  background-color: rgba(0, 255, 0, 0.5); /* Green with 50% opacity */
-}
-
-/* Unit */
-h2 {
-  font-size: 2em; /* Relative unit */
-}
-p {
-  font-size: 18px; /* Absolute unit */
-}
-footer {
-  font-size: 1.5rem; /* Relative unit */
-}
-
-/* Box Model */
-section {
-  margin: 10px 20px 30px 40px; /* Long notation */
-  padding: 5px; /* Short notation */
-}
-div {
-  margin: auto; /* Auto margin */
-}
-
-/* Borders */
-video {
-  border-style: solid;
-  border-color: brown;
-  border-width: 2px;
-  border-radius: 10px;
-}
-
-/* Text */
-p {
-  text-decoration: underline;
-}
-footer {
-  text-align: center;
-}
-
-/* Display */
-footer {
-  display: block;
-}
-hr {
-  display: inline-block;
-}
-
-/* Sizing */
-form {
-  height: 200px;
-  width: 80%;
-  max-width: 600px;
-  min-width: 300px;
-}
-
-/* Position */
-details {
-  position: sticky;
-  top: 20px;
-}
-summary {
-  position: relative;
-}
-
-/* Pseudo-class */
-button:hover {
-  color: purple;
-}
-button:active {
-  color: yellow;
-}
-
-/* Flexbox */
-div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Grid */
-main {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 20px;
-}
-
-/* Responsiveness */
-@media screen and (max-width: 768px) {
-  main {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Fonts */
-body {
-  font-family: 'Roboto', sans-serif; /* Using a Google Font */
-}
-
-/* CSS Selectors */
-/* Class Selector */
-.some-class {
-  color: orange;
-}
-
-/* ID Selector */
-#footer {
-  color: grey;
-}
-
-/* Universal Selector */
 * {
-  font-style: italic;
+    /* Sets entire page's font to Roboto */
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Element Selector */
-input {
-  border: 1px solid black;
+header {
+    background-color: cornflowerblue;
 }
 
-/* Attribute Selector */
-input[type="text"] {
-  background-color: lightgrey;
+body {
+    background-color: var(--base-color, white); /* If --base-color is invalid for some reason, will default to white  */
 }
 
-/* Pseudo-class Selector */
-a:hover {
-  text-decoration: none;
-}
-
-/* Selector List */
-h2, p {
-  font-weight: bold;
-}
-
-/* Combinators */
-/* Descendant Combinator */
-main p {
-  font-style: normal;
-}
-
-/* Child Combinator */
-main > section {
-  font-size: 1.2em;
-}
-
-/* General sibling combinator */
-main ~ footer {
-  font-size: 1.2em;
-}
-
-/* Adjacent sibling combinator */
-footer + hr {
-  margin-top: 20px;
-}
-
-/* Combining Two Selectors */
-footer.button {
-  background-color: cyan;
-}
-
-/* Box Model */
-/* Margin */
-h3 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-div {
-  margin: 10px 20px 30px 40px; /* Short notation */
-}
-
-/* Padding */
 footer {
-  padding-top: 10px;
-  padding-bottom: 20px;
-  padding-left: 30px;
-  padding-right: 40px;
-}
-section {
-  padding: 5px; /* Short notation */
+    background-color: cornflowerblue;
 }
 
-/* Text Color */
-main {
-  color: darkgreen;
+footer h2{
+    background-color: lightgray;
 }
 
-/* Nesting Selector */
-main h2 {
-  text-decoration: underline;
+h1 {
+    color: #800000; /* Maroon */
+    text-align: center;
 }
 
-/* :has() pseudo-class */
-h1:has(+ p) {
-  margin-bottom: 0;
+h2 {
+    color: rgb(34, 139, 34); /* Forest Green */
+    text-align: center;
 }
+
+h3 {
+    color: color(srgb 34 139 34 / 0.5); /* Semi-transparent Forest Green */
+    text-decoration: underline;
+}
+
+h3:has(+ p) {
+    color: darkcyan;
+}
+
+h3 + p {
+    color: hsl(218, 100%, 27%); /* Dark Cyan */
+}
+
+ul > li {
+    color: midnightblue;
+}
+
+fieldset ~ img {
+    border-width: 3px; /* Reduced border width */
+}
+
+/* Used for both header and footer */
+.box {
+    /* Border */
+    border-style: solid;
+    border-color: color-mix(in HSL, blue 60%, white); /* Mixed blue with more dominance */
+    border-width: 3mm; /* Reduced border width */
+    border-radius: 10px; /* Increased border radius */
+
+    /* Padding */
+    padding: 1cm 1cm; /* Uniform padding */
+    padding-left: 20px; /* Increased left padding */
+    padding-bottom: 20px; /* Increased bottom padding */
+
+    /* Margin */
+    margin: 5vh 5vw; /* Reduced margin */
+    margin-left: 5vw; /* Reduced left margin */
+    margin-bottom: 5vh; /* Reduced bottom margin */
+}
+
+/* Used for general body texts */
+section.general {
+    /* Border */
+    border-style: none;
+    border-radius: 8px;
+
+    /* Padding */
+    padding: 15px; /* Reduced padding */
+
+    /* Margin */
+    margin: auto;
+}
+
+form {
+    position: static;
+    /* Makes the form into a centered */
+    display: flex; /* Changed from grid to flex */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Changed to column layout */
+}
+
+nav {
+    /* Flex container for the navigation bar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+audio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video, 
+img {
+    max-width: 95%; /* Reduced maximum width */
+    height: auto;
+}
+
+summary:hover {
+    color: darkblue; /* Changed hover color to dark blue */
+}
+
+button {
+    &:hover {
+        color: dimgray; /* Changed hover color to dim gray */
+    }
+    &:active {
+        color: black;
+    }
+}
+
+a[href="#poll"] {
+    color: darkorchid; /* Changed link color to dark orchid */
+}
+
+@media (min-width: 30em) and (max-width: 50em) {
+    #cat {
+        position: static;
+        align-content: center;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 51em) {
+    #cat {
+        display: none;
+    }
+    header {
+        position: sticky;
+        top: 10px; /* Reduced sticky header top position */
+    }
+}
+
