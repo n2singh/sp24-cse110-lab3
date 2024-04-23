@@ -5,239 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baking Club Meeting Minutes</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <style>
-        /* Comment: write down comments to make your css easier to read */
-        /* This CSS stylesheet styles the Baking Club Meeting Minutes webpage */
-
-        /* Color: apply colors to your HTML elements */
-        body {
-            color: #333; /* hex code */
-        }
-
-        h1 {
-            color: rgb(70, 130, 180); /* rgb value */
-        }
-
-        h2 {
-            color: hsl(240, 100%, 50%); /* hsl value */
-        }
-
-        /* CSS Variables & Fallbacks */
-        :root {
-            --primary-color: #007bff; /* primary color variable */
-        }
-
-        body {
-            color: var(--primary-color); /* using CSS variable */
-            color: #007bff; /* fallback color */
-        }
-
-        /* Background: apply background styles to your elements */
-        body {
-            background-color: #f8f9fa; /* background color */
-        }
-
-        /* Unit: units of measurement for sizing and spacing your elements */
-        /* Relative units */
-        header {
-            padding: 2rem; /* rem unit */
-        }
-
-        main {
-            width: 80%; /* percentage unit */
-            margin: 0 auto; /* em unit */
-        }
-
-        footer {
-            padding: 20px; /* px unit */
-        }
-
-        /* Box Model: configure the containers that holds your HTML content */
-        /* Margin */
-        header {
-            margin-bottom: 20px; /* longhand */
-            margin: 10px 0; /* shorthand */
-        }
-
-        /* Padding */
-        section {
-            padding: 10px 20px; /* longhand */
-            padding: 10px; /* shorthand */
-        }
-
-        /* Borders */
-        section {
-            border: 1px solid #ccc; /* border style, color, and width */
-            border-radius: 5px; /* border radius */
-        }
-
-        /* Text: style your text */
-        p {
-            text-align: justify; /* text alignment */
-            text-decoration: none; /* text decoration */
-        }
-
-        /* Display */
-        nav ul {
-            display: block; /* block value */
-        }
-
-        /* Sizing: set the height and width for an element */
-        img {
-            max-width: 100%; /* max width */
-            height: auto; /* maintain aspect ratio */
-        }
-
-        /* Position: element positioning on the page */
-        footer {
-            position: fixed; /* fixed position */
-            bottom: 0;
-            left: 0;
-            width: 100%;
-        }
-
-        /* Pseudo-class: elements that exist in your document conditionally */
-        a:hover {
-            color: #0056b3; /* hover color */
-        }
-
-        /* Layouts */
-        /* Flexbox */
-        main {
-            display: flex; /* flex container */
-            flex-wrap: wrap; /* wrap children */
-            justify-content: space-around; /* horizontal alignment */
-            align-items: center; /* vertical alignment */
-        }
-
-        /* Grid */
-        section {
-            display: grid; /* grid container */
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* responsive grid */
-            gap: 20px; /* gap between grid items */
-        }
-
-        /* Responsiveness: make your website friendly for multiple devices */
-        @media screen and (max-width: 768px) {
-            main {
-                width: 90%; /* adjust width for smaller screens */
-            }
-        }
-
-        /* Fonts */
-        body {
-            font-family: 'Arial', sans-serif; /* default font */
-        }
-
-        /* CSS Selectors */
-        /* Class Selector */
-        .highlight {
-            background-color: #ffffcc; /* highlight color */
-        }
-
-        /* ID Selector */
-        #topic {
-            font-weight: bold; /* bold font */
-        }
-
-        /* Universal Selector */
-        * {
-            border: 1px solid #ccc; /* border for all elements */
-        }
-
-        /* Element Selector */
-        h3 {
-            font-style: italic; /* italic font */
-        }
-
-        /* Attribute Selector */
-        img[alt="Baking Diagram"] {
-            border: none; /* remove border for specific img */
-        }
-
-        /* Pseudo-class Selector */
-        p:hover {
-            background-color: #f0f0f0; /* background color on hover */
-        }
-
-        /* Selector List */
-        h1, h2 {
-            text-transform: uppercase; /* uppercase text */
-        }
-
-        /* Combinators */
-        nav > ul {
-            margin: 0; /* remove margin for direct child */
-        }
-
-        footer + hr {
-            margin-top: 20px; /* add margin before hr */
-        }
-
-        /* New Selectors */
-        /* :has() - Not supported in CSS yet */
-
-        /* Nested Selectors */
-        main section h3 {
-            color: #cc0000; /* color for nested h3 */
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 
-<nav>
-    <ul>
-        <li><a href="#topic">Meeting Topic</a></li>
-        <li><a href="#attendance">Attendance</a></li>
-        <li><a href="#agenda">Agenda</a></li>
-        <li><a href="#unfinished">Unfinished Business</a></li>
-        <li><a href="#new">New Business</a></li>
-        <li><a href="#miscellaneous">Miscellaneous</a></li>
-        <li><a href="#footer">Baking Survey</a></li>
-    </ul>
-</nav>
+ <nav>
+        <ul>
+            <li><a href="#topic">Meeting Topic</a></li>
+            <li><a href="#attendance">Attendance</a></li>
+            <li><a href="#agenda">Agenda</a></li>
+            <li><a href="#unfinished">Unfinished Business</a></li>
+            <li><a href="#new">New Business</a></li>
+            <li><a href="#miscellaneous">Miscellaneous</a></li>
+            <li><a href="#footer">Baking Survey</a></li>
+        </ul>
+    </nav>
 
-<header>
-    <section id="topic">
+    <header>
+        <section id="topic">
         <h1>Baking Club Meeting Minutes</h1>
-    </section>
-</header>
-
-<main>
-    <section>
-        <h2>Meeting Topic: Decadent Desserts Competition</h2>
-        <h3>Date: April 13, 2024</h3>
-        
-        <section id="attendance">
+        </section>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Meeting Topic: Decadent Desserts Competition</h2>
+            <h3>Date: April 13, 2024</h3>
+            
+            <section id="attendance">
             <h3>Attendance:</h3>
+            </section>
             <ul>
                 <li>Naina Singh</li>
                 <li>Random Guy</li>
                 <li>Professor Powell</li>
             </ul>
-        </section>
 
-        <section id="agenda">
+            <section id="agenda">
             <h3>Agenda:</h3>
+            </section>
             <ol>
                 <li>Discussion on upcoming baking competition</li>
                 <li>Planning for next baking workshop</li>
                 <li>Review of previous baking techniques</li>
             </ol>
-        </section>
 
-        <section id="unfinished">
+            <section id="unfinished">
             <h3>Unfinished Business:</h3>
+            </section>
             <p>No unfinished business from the previous meeting.</p>
-        </section>
 
-        <section id="new">
+            <section id="new">
             <h3>New Business:</h3>
+            </section>
             <p>Decided on the theme for the upcoming baking competition: "Decadent Desserts".</p>
-        </section>
 
-        <section id="miscellaneous">
+            <section id="micellaneous">
             <h3>Miscellaneous Comments / Questions / Concerns:</h3>
+            </section>
             <p>John suggested organizing a bake sale to raise funds for charity.</p>
             
             <h3>Diagrams / Presentations:</h3>
@@ -256,53 +81,85 @@
                 Your browser does not support the video element.
             </video>
         </section>
-    </section>
-</main>
+    </main>
 
-<footer id="footer">
-    <h2>Baking Survey</h2>
-    
-    <form>
-        <!-- Form content here -->
+    <footer id="footer">
+        <h2>Baking Survey</h2>
+        
+        <form>
+            <fieldset>
+        <legend>Personal questions</legend>
+        <label for="name">Please enter your name</label>
+        <input type="text" id="name" name="Please enter your name"><br>
+        <label for="join-fellowship-yes">Are you interested in joining the club?</label><br>
+        <input type="radio" name="join-fellowship" id="join-fellowship-yes" value="Yes">Yes<br>
+        <input type="radio" name="join-fellowship" id="join-fellowship-no" value="No">No<br>
+        <label for="inquirydate">Enter the date of your feedback submission:</label><br>
+        <input type="date" id="inquirydate" name="inquirydate">
+      </fieldset>
+      <fieldset>
+        <legend>Feedback specific questions</legend>
+        <label for="feedback-choices">Select one of the following:</label><br>
+        <select id="feedback-choices">
+            <option value="Very satisfied!">Very satisfied!</option>
+            <option value="Somewhat satisfied.">Somewhat satisfied.</option>
+            <option value="Neither here nor there.">Neither here nor there.</option>
+            <option value="Vaguely dissatisfied.">Vaguely dissatisfied.</option>
+            <option value="Extremely dissatisfied.">Extremely dissatisfied.</option>
+        </select><br>
+        <input type="checkbox" name="confirmation:" id="checkbox" value="I have read the meeting notes.">I have read the meeting notes.<br>
+        <label for="feedback-multiselect">Please select one that applies:</label><br>
+        <input list="feedback-multisel" id="feedback-multiselect" name="feedback">
+        <datalist id="feedback-multisel">
+            <option value="1">The information provided is inaccurate.</option>
+            <option value="2">My opinions were misrepresented.</option>
+            <option value="3">I love how detailed the minutes were.</option>
+            <option value="4">I think that this should be better. </option>
+            <option value="5">Idk, just here for the vibes.</option>
+        </datalist><br>
+        <label for="message">Optional: Enter other feedback:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+      </fieldset>
+      <button type="submit">Submit!</button>
     </form>
     <hr>
-</footer>
+    </footer>
 
-<hr>
+    <hr>
     
-<div>
-    <span>This is a span element.</span>
-    <span>Another span element for demonstration.</span>
-</div>
+    <div>
+        <span>This is a span element.</span>
+        <span>Another span element for demonstration.</span>
+    </div>
 
-<hr>
+    <hr>
 
-<p>This is a paragraph element. It provides structure to the text content.</p>
+    <p>This is a paragraph element. It provides structure to the text content.</p>
     
-<ul>
-    <li>This is an unordered list item.</li>
-    <li>Another list item here.</li>
-</ul>
+    <ul>
+        <li>This is an unordered list item.</li>
+        <li>Another list item here.</li>
+    </ul>
     
-<ol>
-    <li>This is an ordered list item.</li>
-    <li>Another ordered list item here.</li>
-</ol>
+    <ol>
+        <li>This is an ordered list item.</li>
+        <li>Another ordered list item here.</li>
+    </ol>
     
-<p><b>This text is bold.</b> <strong>This text is strong.</strong> They are visually similar, but semantically different.</p>
+    <p><b>This text is bold.</b> <strong>This text is strong.</strong> They are visually similar, but semantically different.</p>
     
-<p><i>This text is italicized.</i> <em>This text is emphasized.</em> They serve similar purposes, but have different meanings.</p>
+    <p><i>This text is italicized.</i> <em>This text is emphasized.</em> They serve similar purposes, but have different meanings.</p>
     
-<a href="#">This is a link</a> to nowhere.
+    <a href="#">This is a link</a> to nowhere.
     
-<p>This is a line<br>break.</p>
+    <p>This is a line<br>break.</p>
 
-<hr>
+    <hr>
 
-<details>
-    <summary>Click me for details</summary>
-    <p>This is additional information that can be revealed when clicking the summary.</p>
-</details>
-
+    <details>
+        <summary>Click me for details</summary>
+        <p>This is additional information that can be revealed when clicking the summary.</p>
+    </details>
+    
 </body>
 </html>
